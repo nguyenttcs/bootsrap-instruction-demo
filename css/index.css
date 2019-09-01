@@ -1,0 +1,397 @@
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section, img, iframe {
+    display: block;
+}
+/* Global */
+* {
+    margin: 0;
+    padding: 0;
+    font-size: 14px;
+    box-sizing: border-box;
+}
+:root{
+    --pink-color-0: #FF4F81;
+    --dark-color-1: #282828;
+    --green-color-1: #47908B;
+    --green-color-2: #12CCC3;
+}
+html, body {
+    font-family: 'Work Sans', sans-serif;
+}
+
+/* Common */
+.section__header{
+    position: relative;
+}
+.section__title{
+    font-weight: 550;
+    letter-spacing: 0.1rem;
+    font-size: 3rem;
+    margin-bottom: 1rem;
+    color: var(--pink-color-0);
+}
+.section__subTitle{
+    font-size: 1.2rem;
+    margin-top: 1rem;
+    letter-spacing: 0.3rem;
+    text-transform: capitalize;
+    color: #000000;
+    font-weight: 500;
+}
+.section__subTitle::after{
+    content: " ";
+    display: block;
+    width: 5rem;
+    border-bottom: 0.1rem solid black;
+    background: #000000;
+    position: absolute;
+    top: 132%;
+    right: 47%;
+}
+/* End Common */
+
+/* Header */
+header{
+    background: var(--pink-color-0);
+}
+header > div{
+    display: flex;
+    justify-content: space-between;
+}
+.header__info a:hover span{
+    color: var(--green-color-1);
+}
+.header__social span{
+    padding: 0.2rem 0.7rem;
+    margin: 0 0.2rem;
+    border: 0.1rem solid transparent;
+    background: var(--dark-color-1);
+    transition: .5s;
+}
+.header__social span:hover{
+    border: 0.1rem solid white;
+    background: var(--pink-color-0);
+}
+/* End Header */
+/* Navbar */
+.instruction__header h1{
+    font-size: 2rem;
+    margin: 0;
+    color: var(--dark-color-1);
+    font-weight: 600;
+    letter-spacing: 0.1rem;
+}
+.instruction__header h1 p{
+    color: var(--pink-color-0);
+}
+#navEducation ul li a{
+    text-transform: uppercase;
+    color: var(--dark-color-1);
+    font-weight: 600;
+    letter-spacing: 0.1rem;
+}
+#navEducation ul li.active a{
+    color: var(--pink-color-0);
+}
+#navEducation ul li::after{
+    content: " ";
+    display: block;
+    height: 0.15rem;
+    width: 0%;
+    background: var(--pink-color-0);
+    transition: .5s;
+}
+#navEducation ul li:hover::after,
+#navEducation ul li.active::after{
+    width: 100%;
+}
+.instruction .navbar-toggler{
+    border-color: var(--dark-color-1);
+}
+.instruction .navbar-toggler-icon{
+    background-image: url('../img/navbar-togger-icon.svg');
+}
+/* End Navbar */
+/* carousel */
+#carousel__education .carousel-indicators li{
+    border-radius: 50%;
+    width: 0.8rem;
+    height: 0.8rem;
+}
+
+#carousel__education .carousel-caption{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    width: 80%;
+}
+#carousel__education .carousel-caption button{
+    border: 0.1rem solid white;
+    background: transparent;
+    padding: 0.8rem 2rem;
+    font-size: 1.1rem;
+    transition: .5s;
+}
+#carousel__education .carousel-caption button i{
+   font-size: 0.5rem;
+}
+#carousel__education .carousel-caption button:hover{
+    border: none;
+    background: var(--pink-color-0);
+}
+#carousel__education .carousel-caption b{
+    font-size: 3rem;
+}
+#carousel__education .carousel-caption p{
+    font-size: 1.2rem;
+    letter-spacing: 0.2rem;
+    font-weight: 100 ;
+}
+/* End carousel */
+/* Education */
+.education__intro{
+    line-height: 2;
+    letter-spacing: 0.15rem;
+}
+.education__course{
+    padding: 2rem;
+}
+.education__course-custom{
+    border-right: none !important;
+}
+.education__course h3{
+    color: var(--pink-color-0);
+    font-weight: 600;
+    font-size: 2rem;
+    letter-spacing: 0.2rem;
+}
+.education__course h5{
+    font-weight: 550;
+}
+.education__course p{
+    letter-spacing: 0.2rem;
+}
+/* End Education */
+/* Stats */
+.stats{
+    background: url('../img//g1.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.stats__title{
+    color: var(--pink-color-0);
+    font-weight: 600;
+    font-size: 1.5rem;
+}
+.stats h2{
+    font-size: 4rem;
+    font-weight: 400;
+}
+/* End Stats */
+/* Offer */
+.offer__list{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    grid-gap: 2rem;
+}
+.offer__item span{
+    color: var(--pink-color-0);
+}
+.offer__item{
+    transition: 1s;
+}
+.offer__item:hover{
+    background-color: var(--green-color-2);
+}
+/* End Offer */
+
+/* testimonial */
+.testimonial{
+    background-image: url('../img/banner3.jpg');
+    background-size: cover;
+    background-attachment: fixed;
+    padding: 3rem 0;
+    padding-bottom: 5rem;
+    /* min-height: 42rem; */
+}
+.testimonial__slider{
+    background: rgba(0, 0, 0, 0.47);
+    box-shadow: 0 0 0.2rem 0.1rem #8e8e8e;
+    margin-top: 5rem;
+    padding: 1.5rem 2rem;
+
+}
+.item__box{
+    background: rgba(0, 0, 0, 0.7);
+    color: white;
+    padding: 0.8rem 1rem; 
+    border-radius: 0.3rem;
+    position: relative; 
+}
+.item__box::after{
+    content: "";
+    border-top: 0.6rem solid rgba(0, 0, 0, 0.7);
+    border-left: 0.6rem solid transparent;
+    border-right: 0.6rem solid transparent;
+    position: absolute;
+    bottom: -0.6rem;
+    left: 27%;
+}
+.item__profile{
+    margin-left: 25%;
+    color: white;
+}
+.testimonial__slider .item__profile img{
+    width: 3rem;
+    height: 3rem;
+    float: left;
+    margin-right: 1rem;
+}
+.item__profile p{
+    font-size: 1.2rem;
+}
+.item__profile span{
+    font-size: 0.8rem;
+    color: var(--pink-color-0);
+}
+
+.owl-theme--pink .owl-dots .owl-dot span{
+    background: #ff4f81;
+    opacity: 0.5;
+}
+.owl-theme--pink .owl-dots .owl-dot.active span, .owl-theme .owl-dots .owl-dot:hover span{
+    background: #ff4f81;
+    opacity: 1;
+}
+/* End testimonial */
+/* News */
+.news__list{
+    margin-top: 5rem;
+}
+.news__item h4:hover{
+    transition: .5s;
+}
+.news__item h4:hover{
+    color: var(--pink-color-0);
+}
+.news__item h5{
+    color: var(--pink-color-0);
+}
+.news__item p{
+    line-height: 2;
+}
+/* End News */
+/* footer */
+footer{
+    background: #141415;
+}
+.info__title{
+    padding-bottom: 2rem;
+    color: var(--pink-color-0);
+    font-weight: bold;
+}
+.lates__news span{
+    color: var(--pink-color-0);
+}
+.lates__news p{
+    transition: .5s;
+    cursor: pointer;
+}
+.lates__news p:hover{
+    color: white;
+}
+.contact__info span{
+    color: white;
+    border: 0.1rem solid var(--dark-color-1);
+    padding: 0.3rem 0.6rem;
+}
+.contact__info p:nth-child(3){
+    cursor: pointer;
+    transition: .5s;
+}
+.contact__info p:nth-child(3):hover{
+    color: white;
+}
+.info__signUp .form-control,
+.info__signUp .form-control-sm,
+.info__signUp .form-control-lg,
+.info__signUp .btn-lg{
+    border-radius: 0;
+    border: none;
+}
+.info__signUp .btn-lg{
+    background: var(--pink-color-0);
+    padding: 0.6rem 2.5rem;
+}
+.info__signUp button:hover{
+    background: red;
+}
+.info__footer{
+    background: #000000;
+    padding: 1.5rem 0;
+}
+.info__footer p{
+    margin-bottom: 0;
+}
+.info__footer span{
+    color: var(--pink-color-0);
+    transition: .5s;
+    cursor: pointer;
+}
+.info__footer span:hover{
+    color: white;
+}
+/* End footer */
+
+/* Responsive Media */
+@media (max-width: 576px){
+    /* Header */
+    header > div{
+        display: block;
+    }
+    .header__social{
+        justify-content: center;
+    }
+    /* End header */
+    /* Education */
+    .education__course-custom{
+        border-right: 0.1rem solid black !important;
+    }
+    /* End Education */
+    /* Offer */
+    .offer__list{
+        grid-template-columns: repeat(1, 1fr);
+        grid-template-rows: repeat(6, 1fr);
+        grid-gap: 2rem;
+    }
+    /* End Offer */
+}
+
+/* Medium devices (landscape tablets, 768px and up) */
+@media (max-width: 768px) {
+
+    /* Carousel */
+    #carousel__education .carousel-caption button{
+        padding: 0.5rem 1.2rem;
+        font-size: 1rem;
+    }
+    #carousel__education .carousel-caption h1{
+        font-size: 1.5rem;
+    }
+    #carousel__education .carousel-caption b{
+        font-size: 1.5rem;
+    }
+    #carousel__education .carousel-caption p{
+        font-size: 1rem;
+        letter-spacing: 0.1rem;
+    }
+    /* End Carousel */
+    .education__course-custom{
+        border-right: 0.1rem solid black !important;
+    }
+    /* End Education */
+} 
+
+/* End Responsive */
